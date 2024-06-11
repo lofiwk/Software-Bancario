@@ -20,7 +20,5 @@ abstract class Transaccion {
     }
 
     @Override
-    public String toString() {
-        return "Transaccion [fecha=" + fecha + ", hora=" + hora + ", fechaRegistro=" + fechaRegistro + ", horaRegistro=" + horaRegistro + "]";
-    }
+    public abstract String toString();
 }

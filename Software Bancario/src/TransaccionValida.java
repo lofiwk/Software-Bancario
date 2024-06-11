@@ -8,16 +8,8 @@ class TransaccionValida extends Transaccion {
         this.cuenta = cuenta;
     }
 
-    public int getMonto() {
-        return monto;
-    }
-
-    public Cuenta getCuenta() {
-        return cuenta;
-    }
-
     @Override
     public String toString() {
-        return "TransaccionValida [fecha=" + fecha + ", hora=" + hora + ", fechaRegistro=" + fechaRegistro + ", horaRegistro=" + horaRegistro + ", monto=" + monto + ", cuenta=" + cuenta.getNumero() + "]";
+        return String.format("TransaccionValida||%d||%s %s||%s %s||%s", monto, fecha, hora, fechaRegistro, horaRegistro, cuenta.getNumero());
     }
 }

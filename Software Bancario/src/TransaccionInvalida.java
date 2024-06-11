@@ -8,6 +8,6 @@ class TransaccionInvalida extends Transaccion {
 
     @Override
     public String toString() {
-        return "TransaccionInvalida [fecha=" + fecha + ", hora=" + hora + ", fechaRegistro=" + fechaRegistro + ", horaRegistro=" + horaRegistro + ", error=" + error + "]";
+        return String.format("TransaccionInvalida||%s||%s %s||%s %s", error, fecha, hora, fechaRegistro, horaRegistro);
     }
 }
