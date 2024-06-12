@@ -1,73 +1,35 @@
-import java.io.*;
-import java.util.ArrayList;
+import java.io.File;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Random;
 
 public class SistemaBancario {
     public static void main(String[] args) {
-        File folder = new File("resources");
-        if (!folder.exists()) {
-            folder.mkdir();
+        if (args.length < 2) {
+            System.out.println("Por favor, siga los pasos de los comentarios");
+            // Si está utilizando IntelliJ para ejecutar este programa, es necesario seguir unos pasos adicionales para proporcionar los argumentos necesarios:
+            // 1. Haga clic en 'Run' en el menú superior.
+            // 2. Seleccione 'Edit Configurations'.
+            // 3. Seleccione 'Application' y luego la clase 'SistemaBancario'.
+            // 4. En el campo 'Program Arguments', escriba las rutas de los archivos de entrada y salida:
+            //    ejemplo: archivos/entrada.txt archivos/salida.txt
+            // Este uso de argumentos de línea de comandos es una solución temporal (placeholder) hasta que se implemente una interfaz gráfica de usuario (GUI) en una entrega futura.
+            // Con la GUI, los usuarios podrán seleccionar archivos y ejecutar el programa de manera más interactiva.
+            return;
         }
 
-        File inputFile = new File(folder, "entrada.txt");
+        String inputFileName = args[0];
+        String outputFileName = args[1];
 
-        try (PrintStream fileOut = new PrintStream(new FileOutputStream(inputFile))) {
-            PrintStream console = System.out;
-            System.setOut(fileOut);
+        Banco banco = new Banco();
+        banco.generarTransacciones();
 
-            List<Transaccion> transacciones = new ArrayList<>();
-            Random random = new Random();
+        List<Transaccion> transacciones = banco.getTransacciones();
+        transacciones.sort(Comparator.comparing(Transaccion::getFechaRegistro).thenComparing(Transaccion::getHoraRegistro));
 
-            Cliente cliente1 = new Cliente("Jorge Soto", "1234 Agua Santa", "contact@example.com");
-            Cliente cliente2 = new Cliente("Juan Perez", "5678 Ferrari Street", "contact2@example.com");
+        GestorDeArchivos.escribirTransaccionesEnArchivo(inputFileName, transacciones);
+        GestorDeArchivos.leerYMostrarContenidoDelArchivo(inputFileName);
 
-            Cuenta cuenta1 = new Cuenta("1234567890", 1000, "Vista");
-            Cuenta cuenta2 = new Cuenta("0987654321", 5000, "Corriente");
-
-            cliente1.agregarCuenta(cuenta1);
-            cliente2.agregarCuenta(cuenta2);
-
-            transacciones.add(ValidadorDeTransacciones.validarTransaccion("2023-06-01", "10:00:00", "2023-06-01", "10:05:00", 500, cuenta1));
-            transacciones.add(ValidadorDeTransacciones.validarTransaccion("2023-06-02", "15:30:00", "2023-06-02", "15:35:00", -200, cuenta1));
-            transacciones.add(ValidadorDeTransacciones.validarTransaccion("2023-06-03", "09:15:00", "2023-06-03", "09:20:00", 1000, cuenta2));
-
-            for (int i = 0; i < 2; i++) {
-                int monto = random.nextInt(2000) - 1000;
-                String fecha = "2023-06-" + String.format("%02d", (4 + i));
-                String hora = "12:00:00";
-                String horaRegistro = "12:05:00";
-
-                Transaccion transaccion = ValidadorDeTransacciones.validarTransaccion(fecha, hora, fecha, horaRegistro, monto, random.nextBoolean() ? cuenta1 : cuenta2);
-                transacciones.add(transaccion);
-            }
-
-            transacciones.sort(Comparator.comparing(Transaccion::getFechaRegistro).thenComparing(Transaccion::getHoraRegistro));
-
-            for (Transaccion transaccion : transacciones) {
-                System.out.println(transaccion);
-            }
-
-            System.setOut(console);
-
-            try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
-                String line;
-                System.out.println("Contenido del archivo:");
-                while ((line = reader.readLine()) != null) {
-                    System.out.println(line);
-                }
-            } catch (IOException e) {
-                System.out.println("Ocurrió un error al leer el archivo.");
-                e.printStackTrace();
-            }
-
-        } catch (FileNotFoundException e) {
-            System.out.println("Ocurrió un error al crear el archivo de salida.");
-            e.printStackTrace();
-        }
-
-        File outputFile = new File(folder, "salida.txt");
-        RevisorDeArchivo.revisarYCorregirArchivo(inputFile, outputFile);
+        File outputFile = new File(outputFileName);
+        RevisorDeArchivo.revisarYCorregirArchivo(new File(inputFileName), outputFile);
     }
 }
