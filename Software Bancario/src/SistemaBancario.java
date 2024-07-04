@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.io.File;
 import java.util.Comparator;
 import java.util.List;
@@ -31,5 +32,32 @@ public class SistemaBancario {
 
         File outputFile = new File(outputFileName);
         RevisorDeArchivo.revisarYCorregirArchivo(new File(inputFileName), outputFile);
+
+        // Abrir la interfaz gráfica de login
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                JFrame frame = new JFrame("Login");
+                UI_login uiLogin = new UI_login();
+                frame.setContentPane(uiLogin.getPanelPrincipalLogin());
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.pack();
+                frame.setVisible(true);
+
+                // Si el login es exitoso, abrir la interfaz de despliegue de transacciones
+                uiLogin.setLoginListener(new UI_login.LoginListener() {
+                    @Override
+                    public void onLoginSuccess() {
+                        frame.dispose(); // Cerrar la ventana de login
+                        JFrame transaccionesFrame = new JFrame("Despliegue de Transacciones");
+                        UI_DespliegueTransacciones uiDespliegueTransacciones = new UI_DespliegueTransacciones();
+                        transaccionesFrame.setContentPane(uiDespliegueTransacciones.getPanelPrincipalDT());
+                        transaccionesFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        transaccionesFrame.pack();
+                        transaccionesFrame.setVisible(true);
+                    }
+                });
+            }
+        });
     }
 }

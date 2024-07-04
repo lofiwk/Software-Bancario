@@ -9,6 +9,8 @@ class ValidadorDeTransacciones {
         if (cuenta == null || fecha == null || hora == null || fechaRegistro == null || horaRegistro == null) {
             return new TransaccionInvalida(fecha, hora, fechaRegistro, horaRegistro, "Datos faltantes");
         }
-        return new TransaccionValida(fecha, hora, fechaRegistro, horaRegistro, monto, cuenta);
+        TransaccionValida transaccionValida = new TransaccionValida(fecha, hora, fechaRegistro, horaRegistro, monto, 0, cuenta);
+        cuenta.agregarTransaccion(transaccionValida);
+        return transaccionValida;
     }
 }

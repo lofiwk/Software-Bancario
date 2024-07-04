@@ -19,6 +19,16 @@ abstract class Transaccion {
         return horaRegistro;
     }
 
+    public abstract int getMonto();
+
+    public abstract int getCosto();
+
+    public abstract String getTipoTransaccion();
+
+    public abstract String getFecha();
+
+    public abstract Cuenta getCuenta();
+
     @Override
     public abstract String toString();
 }

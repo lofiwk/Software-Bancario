@@ -1,0 +1,3 @@
+admin:admin
+usuario1:password1
+usuario2:password2

@@ -4,27 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1b07ce8-3038-4522-9889-6d9796c0d599" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Software Bancario/src/Banco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Software Bancario/src/GestorDeArchivos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Software Bancario/src/UI_DespliegueTransacciones.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Software Bancario/src/UI_DespliegueTransacciones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Software Bancario/src/UI_login.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Software Bancario/src/UI_login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Software-Bancario.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Software_Bancario.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="a1b07ce8-3038-4522-9889-6d9796c0d599" name="Changes" comment="oki">
+      <change afterPath="$PROJECT_DIR$/archivos/credenciales.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Software Bancario/src/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software Bancario/src/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Software Bancario/src/RevisorDeArchivo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software Bancario/src/RevisorDeArchivo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software Bancario/src/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software Bancario/src/Cuenta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Software Bancario/src/SistemaBancario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software Bancario/src/SistemaBancario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Software Bancario/src/Transaccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software Bancario/src/Transaccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software Bancario/src/TransaccionInvalida.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software Bancario/src/TransaccionInvalida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Software Bancario/src/TransaccionValida.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software Bancario/src/TransaccionValida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Software Bancario/Cliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/SistemaBancario.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Software Bancario/SistemaBancario.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/TransaccionValida.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Software Bancario/TransaccionValida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software Bancario/src/UI_DespliegueTransacciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software Bancario/src/UI_DespliegueTransacciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software Bancario/src/UI_login.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software Bancario/src/UI_login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Software Bancario/src/ValidadorDeTransacciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/Software Bancario/src/ValidadorDeTransacciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archivos/entrada.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archivos/entrada.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archivos/salida.txt" beforeDir="false" afterPath="$PROJECT_DIR$/archivos/salida.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/Banco.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/Cliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/Cuenta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/GestorDeArchivos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/RevisorDeArchivo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/SistemaBancario.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/Transaccion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/TransaccionInvalida.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/TransaccionValida.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Software Bancario/ValidadorDeTransacciones.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,19 +58,46 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.UI_login.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "122",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "190",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "493",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "257",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="SistemaBancario" />
+      <module name="Software-Bancario" />
+      <option name="PROGRAM_PARAMETERS" value="archivos/entrada.txt archivos/salida.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UI_login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UI_login" />
+      <module name="Software-Bancario" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.UI_login" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UI_login" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -76,6 +107,27 @@
       <option name="presentableId" value="Default" />
       <updated>1720069798437</updated>
     </task>
+    <task id="LOCAL-00001" summary="oki">
+      <option name="closed" value="true" />
+      <created>1720076116135</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1720076116135</updated>
+    </task>
+    <task id="LOCAL-00002" summary="oki">
+      <option name="closed" value="true" />
+      <created>1720076134995</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720076134995</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="oki" />
+    <option name="LAST_COMMIT_MESSAGE" value="oki" />
   </component>
 </project>

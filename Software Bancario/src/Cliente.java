@@ -24,6 +24,18 @@ class Cliente {
         return cuentas;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public String getContacto() {
+        return contacto;
+    }
+
     // Método sobrescrito para devolver una representación en cadena del cliente
     @Override
     public String toString() {
