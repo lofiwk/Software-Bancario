@@ -14,14 +14,17 @@ class Cliente {
         this.cuentas = new ArrayList<>();
     }
 
+    // Método para agregar una cuenta a la lista de cuentas del cliente
     public void agregarCuenta(Cuenta cuenta) {
         cuentas.add(cuenta);
     }
 
+    // Método para obtener la lista de cuentas del cliente
     public List<Cuenta> getCuentas() {
         return cuentas;
     }
 
+    // Método sobrescrito para devolver una representación en cadena del cliente
     @Override
     public String toString() {
         return "Cliente [nombre=" + nombre + ", direccion=" + direccion + ", contacto=" + contacto + "]";
